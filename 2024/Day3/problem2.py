@@ -5,7 +5,7 @@ enabled = True
 
 with open('input.txt', 'r') as file:
     for line in file:
-        matches = re.findall(r"mul\((\d+),(\d+)\)|(do)\(\)|(don't)\(\)",line)
+        matches = re.findall(r"mul\((\d+),(\d+)\)|(do)\(\)|(don't)\(\)",line) # find mul, do or dont and find the numbers as groups
         for match in matches:
             x, y, do, dont = match
             if do:

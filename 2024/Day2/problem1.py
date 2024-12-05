@@ -6,7 +6,7 @@ with open('input.txt', 'r') as file:
         increase = True
         decrease = True
         spacing = True
-        for a, b in zip(values, values[1:]):
+        for a, b in zip(values, values[1:]): # many ifs but it works
             if int(a) < int(b):
                 decrease = False
             if int(a) > int(b):

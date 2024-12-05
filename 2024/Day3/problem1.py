@@ -4,7 +4,7 @@ sum = 0
 
 with open('input.txt', 'r') as file:
     for line in file:
-        matches = re.findall(r"mul\((\d+),(\d+)\)",line)
+        matches = re.findall(r"mul\((\d+),(\d+)\)",line) # find mul and take numbers
         for match in matches:
             x, y = match
             print(f"x: {x}, y: {y}")
