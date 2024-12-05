@@ -1,3 +1,4 @@
+# checks if AS(S) is in a certain direction
 def checkDirection(matrix, seq, row, col, rowIncrease, colIncrease):
     try:
         for i, char in enumerate(seq):
@@ -13,15 +14,15 @@ def checkDirection(matrix, seq, row, col, rowIncrease, colIncrease):
 
 def checkMOrS(matrix, row, col, rowIncrease, colIncrease):
     try:
-        rowValue = matrix[row + rowIncrease][col]
+        rowValue = matrix[row + rowIncrease][col] # DIAGONAL VALUES
         colValue = matrix[row][col + colIncrease]
-        if colValue == rowValue:
+        if colValue == rowValue: # IF THEY ARE THE SAME, IT IS EITHER SAS OR MAM AND NOT MAS
             return 0
-        if colValue != "S" and colValue != "M":
+        if colValue != "S" and colValue != "M": # M OR S
             return 0
-        if rowValue != "S" and rowValue != "M":
+        if rowValue != "S" and rowValue != "M": # M OR S
             return 0
-        if colIncrease == -2 and colValue == "M":
+        if colIncrease == -2 and colValue == "M": # I DONT REMEMBER THIS EDGE CASE
             return 0
         print("row " + str(row) + " col " + str(col))
         return 1

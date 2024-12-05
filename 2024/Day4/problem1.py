@@ -1,3 +1,4 @@
+# checks if MAS is in a certain direction
 def checkDirection(matrix, seq, row, col, rowIncrease, colIncrease):
     try:
         for i, char in enumerate(seq): # Iterate through MAS
