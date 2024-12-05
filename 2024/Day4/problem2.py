@@ -43,7 +43,7 @@ with open('input.txt', 'r') as file:
                 if checkDirection(matrix, 'AS', row_index, col_index, 1, -1):
                     sum += checkMOrS(matrix, row_index, col_index, 2, -2)
                 if checkDirection(matrix, 'AS', row_index, col_index, -1, 1) and matrix[row_index][col_index+2] == "M" and matrix[row_index-2][col_index] == "S":
-                    sum += 1
+                    sum += 1 # SPECIAL CASE FOR UPWARD CROSS
 
 
 
